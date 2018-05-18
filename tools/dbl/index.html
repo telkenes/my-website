@@ -82,10 +82,10 @@ Your DBL token is not saved to a DB(database) and this tool is <a href="https://
     $(function() {
         var token = $("#token").val()
         var servercount = $("#servercount").val()
-        if (!token) return alert("Please fill in all the details")
-        if (!servercount) return alert("Please fill in all the details")
-        if (token.length !== 155) return alert("Invalid DBL token")
-        if (isNaN(servercount)) return alert("Server Count is not a valid number")
+        if (!token) {alert("Please fill in all the details")}
+        if (!servercount) {alert("Please fill in all the details")}
+        if (token.length !== 155) {alert("Invalid DBL token")}
+        if (isNaN(servercount)) {alert("Server Count is not a valid number")}
       $.ajax({
     method: 'POST',
     url: `https://discordbots.org/api/bots/stats`,
